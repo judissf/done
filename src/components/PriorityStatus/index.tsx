@@ -1,7 +1,7 @@
 import { Context } from '../../Context'
 import { useContext } from 'react'
 import { PriorityStatusStyle, InputRadio, Label, StatusColor } from './style'
-import { IPriority, ITask, IUpdateTask } from '../../interfaces'
+import { IPriority, INewTask, IUpdateTask } from '../../interfaces'
 
 export function PriorityStatus({ id, priority, value, priority_color }: IPriority) {
   const { setNewTask, setUpdateTask, isDarkTheme } = useContext(Context)
@@ -10,7 +10,7 @@ export function PriorityStatus({ id, priority, value, priority_color }: IPriorit
     <PriorityStatusStyle>
       <InputRadio
         onClick={(event) => {
-          setNewTask((prev: ITask) => ({...prev, priority: event.target.value}))
+          setNewTask((prev: INewTask) => ({...prev, priority: event.target.value}))
           setUpdateTask((prev: IUpdateTask) => ({...prev, priority: event.target.value}))}
         }
         value={value}
