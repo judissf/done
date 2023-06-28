@@ -40,7 +40,7 @@ export function ModalEditTask() {
           background_color={isDarkTheme ? '#3c3c3c' : '#f5f5f5'}
           color={isDarkTheme ? 'white' : 'black'}
           border_color={isDarkTheme ? '1px solid white' : '1px solid black'}
-          onSubmit={(event) => {
+          onSubmit={(event: { preventDefault: () => void }) => {
             event.preventDefault()
             editTask()
             setShowModalEditTask(false)
