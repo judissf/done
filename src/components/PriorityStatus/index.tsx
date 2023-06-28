@@ -9,7 +9,7 @@ export function PriorityStatus({ id, priority, value, priority_color }: IPriorit
   return (
     <PriorityStatusStyle>
       <InputRadio
-        onClick={(event) => {
+        onClick={(event: any) => {
           setNewTask((prev: INewTask) => ({...prev, priority: event.target.value}))
           setUpdateTask((prev: IUpdateTask) => ({...prev, priority: event.target.value}))}
         }
