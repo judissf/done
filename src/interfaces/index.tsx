@@ -9,8 +9,8 @@ export interface IContext {
   setShowModalAddTask: React.Dispatch<React.SetStateAction<boolean>>
   showModalEditTask: boolean
   setShowModalEditTask: React.Dispatch<React.SetStateAction<boolean>>
-  newTask: ITask
-  setNewTask: React.Dispatch<React.SetStateAction<ITask>>
+  newTask: INewTask
+  setNewTask: React.Dispatch<React.SetStateAction<INewTask>>
   updateTask: IUpdateTask
   setUpdateTask: React.Dispatch<React.SetStateAction<IUpdateTask>>
   addNewTask: () => void
@@ -33,6 +33,14 @@ export interface ITask {
   rejected: boolean
   createdAt: string
   index: number
+}
+
+export interface INewTask {
+  description: string
+  priority: string
+  done: boolean
+  rejected: boolean
+  createdAt: string
 }
 
 export interface IUpdateTask {

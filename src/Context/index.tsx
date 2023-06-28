@@ -2,9 +2,9 @@ import { createContext, useState } from 'react'
 import {
   IContext,
   IProviderProps,
-  ITask,
   IUpdateTask,
   IUser,
+  INewTask
 } from '../interfaces'
 
 export const Context = createContext<IContext>({} as IContext)
@@ -13,7 +13,7 @@ export function Provider({ children }: IProviderProps) {
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
   const [showModalAddTask, setShowModalAddTask] = useState<boolean>(false)
   const [showModalEditTask, setShowModalEditTask] = useState<boolean>(false)
-  const [newTask, setNewTask] = useState<ITask>({
+  const [newTask, setNewTask] = useState<INewTask>({
     description: '',
     priority: '',
     rejected: false,
