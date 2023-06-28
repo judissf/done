@@ -32,7 +32,7 @@ export interface ITask {
   done: boolean
   rejected: boolean
   createdAt: string
-  index?: number
+  index: number
 }
 
 export interface IUpdateTask {
