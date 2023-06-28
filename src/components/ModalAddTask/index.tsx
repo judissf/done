@@ -9,7 +9,7 @@ import {
   Submit,
 } from './style'
 import { PriorityStatus } from '../PriorityStatus'
-import { ITask } from '../../interfaces'
+import { INewTask } from '../../interfaces'
 import { toast } from 'react-hot-toast'
 
 export function ModalAddTask() {
@@ -45,7 +45,7 @@ export function ModalAddTask() {
             maxLength={50}
             required
             onChange={(event) =>
-              setNewTask((prev: ITask) => ({
+              setNewTask((prev: INewTask) => ({
                 ...prev,
                 description: event.target.value,
               }))
